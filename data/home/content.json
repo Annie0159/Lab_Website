@@ -1,0 +1,84 @@
+{
+  "hasOpenPositions": true,
+  "news":[
+    {
+        "date": "2024-12-12",
+        "title": "Honors College Research Award",
+        "summary": "Congrats to Winston, Johnmark, Taisei, Malachi, Bryan for the Honors College Research Award.",
+        "image": "uark_image.png"
+    },
+    {
+        "date": "2024-12-12",
+        "title": "SURF Award",
+        "summary": "Congrats to Ethan and Anh for the SURF Award",
+        "image": "uark_image.png"
+    },
+    {
+        "date": "2025-02-25",
+        "title": "New AI Tool Mimics Radiologist Gaze to Read Chest X-Rays",
+        "summary":"Le and her team, in collaboration with the MD Anderson Cancer Center in Houston, are now working to refine ItpCtrl-AI so it can read more complex, three-dimensional CT scans.",
+        "image": "news1.jpg",
+        "link":"https://news.uark.edu/articles/75787/new-ai-tool-mimics-radiologist-gaze-to-read-chest-x-rays"
+    },
+    {
+        "date": "2025-04-10",
+        "title": "Ngan Le Receives Prestigious NSF CAREER Award for AI Research",
+        "summary":"Ngan Le, an associate professor in the Department of Electrical Engineering and Computer Science, has been awarded the prestigious National Science Foundation Faculty Early Career Development award.",
+        "image": "news2.jpg",
+        "link":"https://news.uark.edu/articles/79972/ngan-le-receives-prestigious-nsf-career-award-for-ai-research"
+    },
+    {
+        "date": "2025-04-28",
+        "title": "Technology Ventures Inventor's Spotlight: Ngan Le",
+        "summary":"Through her research on artificial intelligence and computer vision, Ngan Le works to bridge the gap between human intuition and machine logic.",
+        "image": "news3.jpg",
+        "link":"https://news.uark.edu/articles/77380/technology-ventures-inventor-s-spotlight-ngan-le"
+    }
+  ],
+  "sponsors": [
+    {
+      "name": "Adisseo",
+      "logo": "adisseo.png"
+    },
+    {
+      "name": "AI_Sustein",
+      "logo": "ai_sustein.webp"
+    },
+    {
+      "name": "Aviagen",
+      "logo": "aviagen.jpg"
+    },
+    {
+      "name": "Cobb",
+      "logo": "cobb.png"
+    },
+    {
+      "name": "NIH",
+      "logo": "nih.jpg"
+    },
+    {
+      "name": "NSF",
+      "logo": "nsf.jpg"
+    },
+    {
+      "name": "Tyson",
+      "logo": "tyson.png"
+    },
+    {
+      "name": "UA_Power_Group",
+      "logo": "ua_power_group.png"
+    },
+    {
+      "name": "Uark_Agri",
+      "logo": "uark_agri.jpg"
+    },
+    {
+      "name": "Uark_Engineering",
+      "logo": "uark_eng.jpg"
+    },
+    {
+      "name": "Winnow",
+      "logo": "winnow.jpg"
+    }
+  ]
+}

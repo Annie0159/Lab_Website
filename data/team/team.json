@@ -1,0 +1,370 @@
+[
+    {
+        "name": "Dr. Ngan Le",
+        "position": "Principal Investigator",
+        "years": "Assistant Professor",
+        "photo": "ngan_le.jpg",
+        "bio": "Dr. Le is the director of the Artificial Intelligence and Computer Vision Lab and an Assistant Professor in the Department of Computer Science & Computer Engineering at the University of Arkansas. She was a research associate in the Department of Electrical and Computer Engineering (ECE) at Carnegie Mellon University (CMU) in 2018-2019. She received a Ph.D degree in ECE at CMU in 2018, ECE Master degree at CMU in 2015, CS Master Degree at the University of Science, Vietnam in 2009 and CS Bachelor degree at the University of Science, Vietnam in 2005.   Her current research interests focus on Image Understanding, Video Understanding, Computer Vision, Robotics, Artificial Intelligence (Machine Learning, Deep Learning, Reinforcement Learning), Biomedical Imaging, SingleCell-RNA.   Dr. Le is currently an Associate Editor of Elsevier Machine Learning with Applications, a Guest Editor of Scene Understanding in Autonomous (Frontier, a Guest Editor of Artificial intelligence in Biomedicine and Healthcare (MDPI), and a Program Chair of Asilomar 2022. She co-organized the Deep Reinforcement Learning Tutorial for Medical Imaging at MICCAI 2018, Medical Image Learning with Less Labels and Imperfect Data workshop at MICCAI 2019, 2020, 2021, Visual Detection, Recognition and Prediction at Altitude and Range at ICCV 2022. Dr. Le is instructor lead of the Google Machine Learning Bootcamp 2021.Her publications appear in the top-tier conferences including CVPR, MICCAI, ICCV, SPIE, IJCV, ICIP etc, and premier journals including IJCV, JESA, TIP, PR, JDSP, TIFS, etc. She has co-authored 75+ journals, conference papers, and book chapters, 9+ patents and inventions. She has served as a reviewer for 10+ top-tier conferences and journals, including TPAMI, AAAI, CVPR, NIPS, ICCV, ECCV, MICCAI, TIP, PR, TAI, IVC, etc",
+        "email": "thile@uark.edu",
+        "links": [
+            { "label": "Google Scholar", "url": "https://scholar.google.com/citations?user=8ck0k_UAAAAJ"},
+            { "label": "Resume", "url": "data/team/documents/_cv_NganLe-CV.pdf"},
+            { "label": "LinkedIn", "url": "https://www.linkedin.com/in/ngan--le"}
+        ],
+
+        "details": [
+            {
+                "heading": "Patents & Invention Disclosures",
+                "data": [
+                    { 
+                        "title": "Chicken Processing Plant With Automated Computer Vision", 
+                        "subtitle": "P2757US00, UADA 2021-020 (UAF 2021-032)", 
+                        "date": "2021" 
+                    },
+                    { 
+                        "title": "Artificial Intelligence And Vision-Based Broiler Body Weight Measurement", 
+                        "subtitle": "P2736US00, UADA 2021-009 (UAF 2021-017)", 
+                        "date": "2021" 
+                    },
+                    { 
+                        "title": "Simultaneously Detecting and Classifying Abnormal Pap on the Cervix", 
+                        "subtitle": "CMU Invention Disclosure - Under Review", 
+                        "date": "Pending" 
+                    },
+                    { 
+                        "title": "Reformulating Level Sets as Deep Recurrent Neural Network Approach", 
+                        "subtitle": "CMU Invention Disclosure No. 2018-01", 
+                        "date": "2018" 
+                    },
+                    { 
+                        "title": "Methods and Systems for Disease Classification", 
+                        "subtitle": "U.S. Provisional Application Serial No. 61/967,316", 
+                        "date": "2014" 
+                    },
+                    { 
+                        "title": "Automatic Eyebrow Detection, Segmentation, and Matching System", 
+                        "subtitle": "Army Research Office & Lab Grants", 
+                        "date": "2013" 
+                    },
+                    { 
+                        "title": "Facial Aging and Asymmetry Decomposition Based Approaches", 
+                        "subtitle": "Army Research Office & Lab Grants", 
+                        "date": "2013" 
+                    }
+                ]
+            },
+            {
+                "heading": "Work Experience",
+                "data": [
+                    { 
+                        "title": "Research Associate", 
+                        "subtitle": "Cylab Biometrics Center, Carnegie Mellon University", 
+                        "date": "Jul 2018 - Aug 2019" 
+                    },
+                    { 
+                        "title": "Graduate Researcher (Computer Vision)", 
+                        "subtitle": "Carnegie Mellon University", 
+                        "date": "Sep 2011 - May 2018" 
+                    },
+                    { 
+                        "title": "Research Intern (Document Analysis)", 
+                        "subtitle": "IMDS Company", 
+                        "date": "May 2010 - Sep 2011" 
+                    },
+                    { 
+                        "title": "IT Executive", 
+                        "subtitle": "PMDC Corp (World Bank & UNDP Projects)", 
+                        "date": "Aug 2009 - May 2010" 
+                    },
+                    { 
+                        "title": "Lecturer", 
+                        "subtitle": "University of Science, Vietnam", 
+                        "date": "Jan 2009 - May 2010" 
+                    },
+                    { 
+                        "title": "Researcher", 
+                        "subtitle": "MSN Lab, Feng Chia University, Taiwan", 
+                        "date": "Jan 2008 - Jan 2009" 
+                    }
+                ]
+            },
+            {
+                "heading": "Teaching & Seminars",
+                "data": [
+                    { 
+                        "title": "Guest Lecturer: Deep Learning Review & Image Segmentation", 
+                        "subtitle": "University of Arkansas (CSCE4013, CSCE5683)", 
+                        "date": "2018" 
+                    },
+                    { 
+                        "title": "Invited Talk: Deep Reinforcement Learning in Medical Imaging", 
+                        "subtitle": "MICCAI 2018, Granada, Spain", 
+                        "date": "Sep 2018" 
+                    },
+                    { 
+                        "title": "Teaching Assistant: Pattern Recognition & Signal Processing", 
+                        "subtitle": "Carnegie Mellon University (18551, 18792)", 
+                        "date": "2011 - 2018" 
+                    },
+                    { 
+                        "title": "Lecturer: Data Hiding and Secret Sharing", 
+                        "subtitle": "University of Science, Vietnam", 
+                        "date": "2009 - 2010" 
+                    }
+                ]
+            },
+            {
+                "heading": "Awards & Scholarships",
+                "data": [
+                    "NIH Travel Award, MICCAI 2018 (Spain)",
+                    "PhD Scholarship, Carnegie Mellon University (2011 - 2018)",
+                    "PhD Scholarship, Concordia University, Canada (2010)",
+                    "Scholarship of Vietnamese Government for Graduated Students (2008-2010)",
+                    "Best Paper Award, Int. Symposium on Electronic Commerce and Security (2008)",
+                    "First Prize, Nationwide Student’s Research Competition (2005)",
+                    "First Prize, VIFOTEC (Vietnam Fund for Supporting Technology) (2005)"
+                ]
+            },
+            {
+                "heading": "Academic Services",
+                "data": [
+                    "Conference Reviewer: CVPR, NIPS, MICCAI, ICDAR",
+                    "Journal Reviewer: Transactions on Signal Processing",
+                    "Journal Reviewer: Transactions on Image Processing",
+                    "Journal Reviewer: Pattern Recognition Letters"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Khoa Vo",
+        "position": "Researcher",
+        "photo": "khoa_vo.jpg",
+        "years": "Since 2025",
+        "email": ""
+    },
+    {
+        "name": "Marta Veganzones",
+        "position": "Researcher",
+        "email": "",
+        "photo": "marta_veganzones.png",
+        "years": "Since 2023 (Research Associate)",
+        "bio": ""
+    },
+    {
+        "name": "Minh Tran",
+        "position": "PhD Student",
+        "email": "",
+        "photo": "minh_tran.png",
+        "years": "Since 2021",
+        "bio": ""
+    },
+    {
+        "name": "Thinh Phan",
+        "position": "PhD Student",
+        "email": "",
+        "photo": "thinh_phan.jpg",
+        "years": "Since 2023",
+        "bio": ""
+    },
+    {
+        "name": "Trong Thang Pham",
+        "position": "PhD Student",
+        "email": "",
+        "photo": "thang_pham.png",
+        "years": "Since 2023",
+        "bio": ""
+    },
+    {
+        "name": "An Le",
+        "position": "PhD Student",
+        "email": "",
+        "photo": "an_le.png",
+        "years": "Since 2024",
+        "bio": ""
+    },
+    {
+        "name": "Hao Vo",
+        "position": "Masters Student",
+        "email": "",
+        "photo": "hao_vo.jpg",
+        "years": "Since 2025",
+        "bio": ""
+    },
+    {
+        "name": "Farid Hashemian",
+        "position": "Masters Student",
+        "email": "",
+        "photo": "farid_hashemian.png",
+        "years": "Since 2023",
+        "bio": ""
+    },
+    {
+        "name": "Annie Prasanna Manoharan",
+        "position": "Masters Student",
+        "email": "",
+        "photo": "annie_prasanna.png",
+        "years": "Since 2024",
+        "bio": ""
+    },
+    {
+        "name": "Esteban Duran Marti",
+        "position": "Masters Student",
+        "email": "",
+        "photo": "esteban_duran.jpeg",
+        "years": "Since 2024",
+        "bio": ""
+    },
+    {
+        "name": "Ved Mani Shukla",
+        "position": "Masters Student",
+        "email": "",
+        "photo": "no_pic.png",
+        "years": "Since 2024",
+        "bio": ""
+    },
+    {
+        "name": "Phillip Cannon",
+        "position": "Masters Student",
+        "email": "",
+        "photo": "phillip_cannon.png",
+        "years": "Since 2024",
+        "bio": ""
+    },
+    {
+        "name": "Samuel Michael Lin",
+        "position": "Masters Student",
+        "email": "",
+        "photo": "no_pic.png",
+        "years": "Since 2024",
+        "bio": ""
+    },
+    {
+        "name": "Taisei Hanyu",
+        "position": "Undergraduate Student",
+        "email": "",
+        "photo": "taisei_hanyu.jpg",
+        "years": "Since 2022",
+        "bio": ""
+    },
+    {
+        "name": "Winston Bounsavy",
+        "position": "Undergraduate Student",
+        "email": "",
+        "photo": "winston_bounsavy.jpg",
+        "years": "Since 2022",
+        "bio": ""
+    },
+    {
+        "name": "Frederick Bumgarner",
+        "position": "Undergraduate Student",
+        "email": "",
+        "photo": "frederick_bumgarner.png",
+        "years": "Since Aug 2023",
+        "bio": ""
+    },
+    {
+        "name": "Ethan Coffman",
+        "position": "Undergraduate Student",
+        "email": "",
+        "photo": "coffman.jpg",
+        "years": "Since 2024",
+        "bio": ""
+    },
+    {
+        "name": "Kevin Joo",
+        "position": "Visiting Scholar",
+        "email": "",
+        "photo": "kevin_joo.jpg",
+        "years": "May 2022 - Aug 2022",
+        "bio": ""
+    },
+    {
+        "name": "Gustavo Gracia",
+        "position": "Alumni",
+        "email": "",
+        "photo": "gustavo_gracia.png",
+        "years": "BASc (graduated 2022) - Meta",
+        "bio": ""
+    },
+    {
+        "name": "Adrian Luis",
+        "position": "Alumni",
+        "email": "",
+        "photo": "adrian_luis.png",
+        "years": "MSc (graduated 2023) - Dell",
+        "bio": ""
+    },
+    {
+        "name": "Sang Truong",
+        "position": "Alumni",
+        "email": "",
+        "photo": "sang_truong.jpg",
+        "years": "MSc (graduated 2023)",
+        "bio": ""
+    },
+    {
+        "name": "Noah Core",
+        "position": "Alumni",
+        "email": "",
+        "photo": "noah_core.png",
+        "years": "BSc (graduated 2023)",
+        "bio": ""
+    },
+    {
+        "name": "Kala Rohit",
+        "position": "Alumni",
+        "email": "",
+        "photo": "kala_rohit.png",
+        "years": "BSc (graduated 2023)",
+        "bio": ""
+    },
+    {
+        "name": "Anh Tran",
+        "position": "Alumni",
+        "email": "",
+        "photo": "anh_tran.png",
+        "years": "BSc (graduated 2025) - Tyson",
+        "bio": ""
+    },
+    {
+        "name": "Malachi Massey",
+        "position": "Alumni",
+        "email": "",
+        "photo": "malachi_massey.jpg",
+        "years": "BSc (graduated 2025) - Moss & Associates",
+        "bio": ""
+    },
+    {
+        "name": "Yuki Ikebe",
+        "position": "Masters Student",
+        "email": "",
+        "photo": "yuki_ikebe.png",
+        "years": "Since 2024",
+        "bio": ""
+    },
+    {
+        "name": "Johnmark Clements",
+        "position": "Undergraduate Student",
+        "email": "",
+        "photo": "johnmark_clements.jpg",
+        "years": "Since 2024",
+        "bio": ""
+    },
+    {
+        "name": "Bryan Williams",
+        "position": "Undergraduate Student",
+        "email": "",
+        "photo": "bryan_williams.png",
+        "years": "Since 2024",
+        "bio": ""
+    },
+    {
+        "name": "Gladys Gawugah",
+        "position": "Masters Student",
+        "email": "",
+        "photo": "gladys_gawugah.jpg",
+        "years": "Since 2024",
+        "bio": ""
+    }
+]

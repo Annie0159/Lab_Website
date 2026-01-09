@@ -8,7 +8,7 @@
         "email": "thile@uark.edu",
         "links": [
             { "label": "Google Scholar", "url": "https://scholar.google.com/citations?user=8ck0k_UAAAAJ"},
-            { "label": "Resume", "url": "data/team/documents/_cv_NganLe-CV.pdf"},
+            { "label": "Resume", "url": "data/team/documents/NganLe_CV.pdf"},
             { "label": "LinkedIn", "url": "https://www.linkedin.com/in/ngan--le"}
         ],
 
@@ -138,17 +138,17 @@
     },
     {
         "name": "Khoa Vo",
-        "position": "Researcher",
+        "position": "Postdoctoral Researcher",
         "photo": "khoa_vo.jpg",
-        "years": "Since 2025",
+        "years": "Since Jan 2025",
         "email": ""
     },
     {
         "name": "Marta Veganzones",
-        "position": "Researcher",
+        "position": "Associate Researcher",
         "email": "",
         "photo": "marta_veganzones.png",
-        "years": "Since 2023 (Research Associate)",
+        "years": "Since Aug 2025",
         "bio": ""
     },
     {
@@ -157,6 +157,14 @@
         "email": "",
         "photo": "minh_tran.png",
         "years": "Since 2021",
+        "bio": ""
+    },
+    {
+        "name": "Sieu Tran",
+        "position": "PhD Student",
+        "email": "stran5@uark.edu",
+        "photo": "",
+        "years": "Since Jan 2026",
         "bio": ""
     },
     {

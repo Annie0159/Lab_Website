@@ -199,8 +199,8 @@ async function renderTeamPage() {
 
     // --- Define Custom Sorting Order ---
     const positionOrder = {
-        "Principal Investigator": 1, "Researcher": 2, "PhD Student": 3,
-        "Masters Student": 4, "Undergraduate Student": 5, "Visiting Scholar": 6, "Alumni": 7, "Other": 99
+        "Principal Investigator": 1, "Postdoctoral Researcher": 2, "Associate Researcher": 3, "PhD Student": 4,
+        "Masters Student": 5, "Undergraduate Student": 6, "Visiting Scholar": 7, "Alumni": 8, "Other": 99
     };
 
     // --- Group Data ---

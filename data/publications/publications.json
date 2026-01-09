@@ -1,5 +1,21 @@
 [
     {
+        "title": "Enhancing Radiological Diagnosis: A Collaborative Approach Integrating AI and Human Expertise for Visual Miss Correction",
+        "url": "https://arxiv.org/abs/2406.19686",
+        "image": "",
+        "type": "Conference",
+        "authors": "A. Awasthi, N. Le, Z. Deng, CC. Wu, H. V. Nguyen",
+        "year": 2025
+    },
+    {
+        "title": "SolarFormer++: Multi-scale Transformer for Solar PV Profiling and Obstruction Localization for Degradation Mitigation",
+        "url": "https://ieeexplore.ieee.org/abstract/document/11017409",
+        "image": "",
+        "type": "Conference",
+        "authors": "E. Duran, M. Tran, M. Massey, A. Gracia, T. Hanyu, A. Tran, R. McCann, H. Liao, J. Cothren, M. Adkins, C. Rainwater, Y. Huang, A. Mantooth, N. Le",
+        "year": 2025
+    },
+    {
         "title": "Robotic-CLIP: Fine-tuning CLIP on Action Data for Robotic Applications",
         "url": "https://arxiv.org/abs/2409.17727",
         "image": "nguyen_icra2025.png",

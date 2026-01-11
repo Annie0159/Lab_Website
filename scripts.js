@@ -431,7 +431,7 @@ async function renderResearchPage() {
             <div class="py-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-4xl font-extrabold text-gray-900 mb-10 border-b-4 pb-3 border-gray-500">Research Areas</h2>
                 <div class="mb-12">
-                    <p class="text-lg text-gray-600 mt-4">Exploring our ongoing research in Computer Vision, Robotics, and Human-AI Interaction.</p>
+                    <p class="text-lg text-gray-600 mt-4">Explore our ongoing research in Computer Vision, Robotics, and Human-AI Interaction.</p>
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

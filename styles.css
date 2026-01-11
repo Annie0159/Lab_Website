@@ -1,9 +1,9 @@
-/* Set the primary font for the entire document */
+/* Primary font for the entire document */
 :root { 
     font-family: 'Inter', sans-serif; 
 }
 
-/* Simple transition for page content defined in the original HTML */
+/* Simple transition for page content */
 #content-area { 
     transition: opacity 0.3s ease; 
 }

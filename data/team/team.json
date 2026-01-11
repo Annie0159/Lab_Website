@@ -152,19 +152,19 @@
         "bio": ""
     },
     {
-        "name": "Minh Tran",
-        "position": "PhD Student",
-        "email": "",
-        "photo": "minh_tran.png",
-        "years": "Since 2021",
-        "bio": ""
-    },
-    {
         "name": "Sieu Tran",
         "position": "PhD Student",
         "email": "stran5@uark.edu",
         "photo": "",
         "years": "Since Jan 2026",
+        "bio": ""
+    },
+    {
+        "name": "Minh Tran",
+        "position": "PhD Student",
+        "email": "",
+        "photo": "minh_tran.png",
+        "years": "Since 2021",
         "bio": ""
     },
     {
@@ -192,6 +192,30 @@
         "bio": ""
     },
     {
+        "name": "Cuong Ngo",
+        "position": "Masters Student",
+        "email": "",
+        "photo": "",
+        "years": "Since Aug 2025",
+        "bio": ""
+    },
+    {
+        "name": "Taisei Hanyu",
+        "position": "Masters Student",
+        "email": "",
+        "photo": "taisei_hanyu.jpg",
+        "years": "Since 2022",
+        "bio": ""
+    },
+    {
+        "name": "Mark Agnello Alexraj",
+        "position": "Masters Student",
+        "email": "",
+        "photo": "",
+        "years": "Since Jan 2025",
+        "bio": ""
+    },
+    {
         "name": "Hao Vo",
         "position": "Masters Student",
         "email": "",
@@ -216,26 +240,10 @@
         "bio": ""
     },
     {
-        "name": "Esteban Duran Marti",
-        "position": "Masters Student",
-        "email": "",
-        "photo": "esteban_duran.jpeg",
-        "years": "Since 2024",
-        "bio": ""
-    },
-    {
         "name": "Ved Mani Shukla",
         "position": "Masters Student",
         "email": "",
         "photo": "no_pic.png",
-        "years": "Since 2024",
-        "bio": ""
-    },
-    {
-        "name": "Phillip Cannon",
-        "position": "Masters Student",
-        "email": "",
-        "photo": "phillip_cannon.png",
         "years": "Since 2024",
         "bio": ""
     },
@@ -248,27 +256,11 @@
         "bio": ""
     },
     {
-        "name": "Taisei Hanyu",
-        "position": "Undergraduate Student",
-        "email": "",
-        "photo": "taisei_hanyu.jpg",
-        "years": "Since 2022",
-        "bio": ""
-    },
-    {
         "name": "Winston Bounsavy",
         "position": "Undergraduate Student",
         "email": "",
         "photo": "winston_bounsavy.jpg",
         "years": "Since 2022",
-        "bio": ""
-    },
-    {
-        "name": "Frederick Bumgarner",
-        "position": "Undergraduate Student",
-        "email": "",
-        "photo": "frederick_bumgarner.png",
-        "years": "Since Aug 2023",
         "bio": ""
     },
     {
@@ -341,6 +333,30 @@
         "email": "",
         "photo": "malachi_massey.jpg",
         "years": "BSc (graduated 2025) - Moss & Associates",
+        "bio": ""
+    },
+    {
+        "name": "Esteban Duran Marti",
+        "position": "Alumni",
+        "email": "",
+        "photo": "esteban_duran.jpeg",
+        "years": "Masters Graduate May 2025 - capSpite",
+        "bio": ""
+    },
+    {
+        "name": "Phillip Cannon",
+        "position": "Masters Student",
+        "email": "",
+        "photo": "phillip_cannon.png",
+        "years": "Masters Graduate Dec 2025 - CTO at LexMed",
+        "bio": ""
+    },
+        {
+        "name": "Frederick Bumgarner",
+        "position": "Alumni",
+        "email": "",
+        "photo": "frederick_bumgarner.png",
+        "years": "Undergraduate Dec 2025 - NextGen",
         "bio": ""
     },
     {

@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Robotic Control & Embodied AI",
+    "description": "We study perception-grounded robotic control that integrates language, vision, and 3D geometry to enable robust, interpretable robot arm manipulation in open-world environments."
+  },
+  {
+    "title": "Medical Imaging & Clinical AI",
+    "description": "We develop clinically aligned AI systems for medical imaging and bio-signals that emphasize interpretability, multimodal reasoning, and alignment with human expertise."
+  },
+  {
+    "title": "Video Understanding",
+    "description": "We design models for structured video understanding that reason over long-term temporal dynamics, entities, and interactions in complex real-world scenarios."
+  },
+  {
+    "title": "Amodal Instance Segmentation",
+    "description": "We investigate amodal perception methods that infer complete object shapes and identities beyond visible regions, enabling robust reasoning under occlusion."
+  },
+  {
+    "title": "Multi-Object Tracking & Motion Analysis",
+    "description": "We build scalable tracking and motion reasoning systems that generalize across scenes, categories, and supervision regimes."
+  },
+  {
+    "title": "3D Scene Understanding & Open-Vocabulary Perception",
+    "description": "We create object-centric 3D scene representations that support open-vocabulary querying, spatial reasoning, and downstream interaction."
+  },
+  {
+    "title": "Human-Centered & Explainable AI",
+    "description": "We explore human-in-the-loop learning using signals such as gaze, language, and feedback to improve transparency and trust in AI systems."
+  },
+  {
+    "title": "Applied Computer Vision",
+    "description": "We translate foundational vision models into real-world applications, emphasizing robustness, scalability, and deployment in unconstrained environments."
+  }
+]

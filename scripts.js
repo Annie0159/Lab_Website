@@ -9,7 +9,7 @@ const MAX_RETRIES = 3; 
 // Added data paths.
 const DATA_PATHS = { 
     team: './data/team/team.json', 
-    research: './data/research/research.txt', 
+    research: './data/research/research.json', 
     publications: './data/publications/publications.json', 
     home: './data/home/content.json',
     join: './data/join/join.md'
@@ -27,14 +27,13 @@ async function fetchData(key, path, isText = false) { 
             if (!response.ok) { 
                 if (response.status === 404) { 
                     console.warn(`Data file not found: ${path}. Assuming no content for this page.`); 
-                    // Return empty structure for JSON or placeholder text for TXT 
                     return isText ? 'No content available yet.' : []; 
                 } 
                 throw new Error(`HTTP error! Status: ${response.status}`); 
             } 
 
             const data = isText ? await response.text() : await response.json(); 
-            dataCache[key] = data; // Cache the result 
+            dataCache[key] = data; 
             return data; 
 
         } catch (error) { 
@@ -48,12 +47,11 @@ async function fetchData(key, path, isText = false) { 
     return null; 
 } 
 
-// --- Rendering Functions (Pages) --- 
+// --- Rendering Functions  --- 
 function renderNewsCarousel(sortedNews) {
     if (sortedNews.length === 0) return '';
     const dateOptions = { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' };
     
-    // Generate HTML for all news slides
     const newsItemsHtml = sortedNews.map((item, index) => `
         <div class="news-slide p-5 transition-opacity duration-700 ease-in-out" data-index="${index}" style="${index === 0 ? '' : 'display: none;'}">
             <div class="flex flex-col md:flex-row items-center md:space-x-8">
@@ -191,7 +189,7 @@ let globalTeamData = [];
 
 async function renderTeamPage() {
     const teamData = await fetchData('team', DATA_PATHS.team);
-    globalTeamData = teamData || []; // Store data globally so the modal can find it later
+    globalTeamData = teamData || []; 
 
     if (!teamData || teamData.length === 0) {
         return `<h2 class="text-3xl font-bold text-gray-900 mb-6">Our Team</h2><p>No team data available. Please populate the <code>${DATA_PATHS.team}</code> file.</p>`;
@@ -223,7 +221,6 @@ async function renderTeamPage() {
         const members = groupedData[position];
 
         const membersCardsHtml = members.map((member) => {
-             // Create a safe ID for the click handler
              const memberId = member.email || member.name;
              const initials = member.name.split(' ').map(n => n[0]).join('').substring(0, 2);
              const timeDisplay = member.years || '';
@@ -283,12 +280,11 @@ function openTeamModal(memberId) {
 
     const initials = member.name.split(' ').map(n => n[0]).join('').substring(0, 2);
 
-    // A. Render Links (Format: "Label: Link")
+    // A. Render Links 
     const renderLinks = (links) => {
         if (!links || !Array.isArray(links)) return '';
         
         return links.map(link => {
-            // Determine button text based on the URL or Label
             const isPdf = link.url.toLowerCase().endsWith('.pdf');
             const linkText = isPdf ? 'Download PDF' : 'Visit Link';
 
@@ -306,7 +302,7 @@ function openTeamModal(memberId) {
         }).join('');
     };
 
-    // B. Render Details Sections (Main Body)
+    // B. Render Details Sections 
     const renderSections = (sections) => {
         if (!sections || !Array.isArray(sections)) return '';
         
@@ -350,12 +346,10 @@ function openTeamModal(memberId) {
         }).join('');
     };
 
-    // --- BUILD CONTENT ---
     
     let linksArray = member.links || [];
     let allLinksHtml = '';
     
-    // Prepend Email (Format: "Email: [address]")
     if (member.email) {
         allLinksHtml += `
         <div class="mb-2 text-sm">
@@ -369,7 +363,6 @@ function openTeamModal(memberId) {
 
     const detailsHtml = renderSections(member.details);
 
-    // Inject into Modal
     content.innerHTML = `
         <div class="flex flex-col sm:flex-row sm:items-start gap-8">
             
@@ -415,9 +408,48 @@ function closeTeamModal() {
     if(modal) modal.classList.add('hidden');
 }
 
-async function renderResearchPage() { 
-    
-} 
+async function renderResearchPage() {
+    const path = DATA_PATHS.research;
+
+    try {
+        const response = await fetch(path);
+        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+        
+        const researchAreas = await response.json();
+
+        const researchCards = researchAreas.map(area => `
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">${area.title}</h3>
+                ${area.subtitle ? `<p class="text-xs font-bold text-blue-600 mb-3 uppercase tracking-wider">${area.subtitle}</p>` : ''}
+                <p class="text-gray-600 leading-relaxed text-sm">
+                    ${area.description}
+                </p>
+            </div>
+        `).join('');
+
+        return `
+            <div class="py-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-extrabold text-gray-900 mb-10 border-b-4 pb-3 border-gray-500">Research Areas</h2>
+                <div class="mb-12">
+                    <p class="text-lg text-gray-600 mt-4">Exploring our ongoing research in Computer Vision, Robotics, and Human-AI Interaction.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    ${researchCards}
+                </div>
+            </div>
+        `;
+
+    } catch (error) {
+        console.error('Error rendering Research page:', error);
+        return `
+            <div class="py-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-extrabold text-gray-900 mb-10 border-b-4 pb-3 border-gray-500">Research Areas</h2> 
+                <p class="text-red-600 bg-red-50 p-4 rounded-lg">Error loading research data. Please try again later.</p>
+            </div>
+        `;
+    }
+}
 
 async function renderPublicationsPage() { 
     const pubData = await fetchData('publications', DATA_PATHS.publications); 
@@ -528,7 +560,6 @@ async function renderJoinPage() {
 
         const markdownText = await response.text();
 
-        // Fallback parser logic (same as before)
         let contentHtml;
         if (typeof marked !== 'undefined' && marked.parse) {
             contentHtml = marked.parse(markdownText);
@@ -548,7 +579,6 @@ async function renderJoinPage() {
                 .join('');
         }
 
-        // Updated Return Block to match "Publications" style
         return `
             <div class="py-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-4xl font-extrabold text-gray-900 mb-10 border-b-4 pb-3 border-gray-500">Join Us</h2>
@@ -564,27 +594,77 @@ async function renderJoinPage() {
     }
 }
 
-function renderContactPage() { 
-    return ` 
-        <!-- Title color changed to gray-900 --> 
-        <h2 class="text-4xl font-bold text-gray-900 mb-8 border-b-2 pb-2 border-gray-200">Contact Us</h2> 
-        <div class="grid md:grid-cols-2 gap-8 bg-white p-8 rounded-xl shadow-lg"> 
-            <div> 
-                <h3 class="text-2xl font-semibold text-gray-900 mb-4"></h3> 
-                <p class="text-gray-700"> 
-                    
-                </p> 
-            </div> 
-            <div> 
-                <h3 class="text-2xl font-semibold text-gray-900 mb-4"></h3> 
-                <!-- Text color changed to gray-700 --> 
-                <p class="mb-2"><span class="font-medium text-gray-700"></span> <a href="mailto:info@researchgroup.edu" class="text-blue-600 hover:underline"></a></p> 
-                <p><span class="font-medium text-gray-700"></span> </p> 
-            </div> 
-        </div> 
 
-    `; 
-} 
+async function renderContactPage() {
+    const labLocations = [
+        {
+            name: "AICV Lab",
+            address: "J.B. Hunt building (Room 447), 4th Floor",
+            mapUrl: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6450.314615956967!2d-94.173388!3d36.065267!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c96f8f3524e05d%3A0xa6bac06cfca5b525!2sJ.B.%20Hunt%20Transport%20Services%20Inc.%20Center%20for%20Academic%20Excellence%20(JBHT)!5e0!3m2!1sen!2sus!4v1768088725966!5m2!1sen!2sus"
+        },
+        {
+            name: "Robotics Lab",
+            address: "Bell Engineering Center (Room 4134C), 4th Floor",
+            mapUrl: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6450.1719509131435!2d-94.17141!3d36.067007!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c96eddf3abd3ff%3A0xf90b159ca2b2f7a3!2sBell%20Engineering%20Center!5e0!3m2!1sen!2sus!4v1768088862375!5m2!1sen!2sus"
+        }
+    ];
+
+    const mapsHtml = labLocations.map(lab => `
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
+            <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">${lab.name}</h3>
+                <p class="text-gray-600 text-sm mb-4">${lab.address}</p>
+            </div>
+            <div class="h-64 w-full bg-gray-200">
+                <iframe 
+                    src="${lab.mapUrl}" 
+                    width="100%" height="100%" style="border:0;" 
+                    allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    `).join('');
+
+    return `
+        <div class="py-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-extrabold text-gray-900 mb-10 border-b-4 pb-3 border-gray-500">Contact</h2>
+
+            <div class="mb-12">
+                <p class="text-lg text-gray-800">
+                    If you are interested in joining our lab, please go to the 
+                    <a href="#join" onclick="navigateTo('join')" class="font-bold underline hover:text-blue-600 transition-colors">recruitment page</a> 
+                    for application instructions and current openings.
+                </p>
+            </div>
+
+            <div class="mb-12">
+                <h3 class="text-3xl font-bold text-gray-900 mb-6">Faculty Contact</h3>
+                <div class="bg-white p-8 rounded-2xl shadow-md border border-gray-100">
+                    <p class="text-xl font-bold text-gray-900">Dr. Ngan Le</p>
+                    <p class="text-gray-600 mb-4">Principal Investigator</p>
+                    
+                    <div class="space-y-3 mt-6">
+                        <p class="flex items-center text-gray-700">
+                            <span class="font-semibold w-20">Email:</span>
+                            <a href="mailto:thile@uark.edu" class="text-blue-600 hover:underline">thile@uark.edu</a>
+                        </p>
+                        <p class="flex items-center text-gray-700">
+                            <span class="font-semibold w-20">Office:</span>
+                            <span>JBHT 515, J.B. Hunt Building</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-3xl font-bold text-gray-900 mb-6">Lab Locations</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    ${mapsHtml}
+                </div>
+            </div>
+        </div>
+    `;
+}
 
 // --- News Carousel Logic ---
 
@@ -592,17 +672,11 @@ let currentNewsIndex = 0;
 let newsSlides = [];
 let newsInterval;
 
-/**
- * Shows a specific news slide and hides others.
- * @param {number} n The index to move to.
- */
 function showNewsSlide(n) {
     if (!newsSlides || newsSlides.length === 0) return;
 
-    // Calculate new index, wrapping around
     currentNewsIndex = (n + newsSlides.length) % newsSlides.length;
 
-    // Update visibility
     newsSlides.forEach((slide, index) => {
         if (index === currentNewsIndex) {
             slide.style.display = 'block';
@@ -614,12 +688,8 @@ function showNewsSlide(n) {
     });
 }
 
-/**
- * Changes the news slide index manually via buttons, and resets the auto-rotate timer.
- * @param {number} n The direction to move (-1 for back, 1 for forward).
- */
+
 function changeNewsSlide(n) {
-    // Clear the auto interval and set a new one after manual change
     if (newsInterval) {
         clearInterval(newsInterval);
         startNewsAutoRotate();
@@ -627,32 +697,25 @@ function changeNewsSlide(n) {
     showNewsSlide(currentNewsIndex + n);
 }
 
-/**
- * Starts the automatic rotation of the news carousel.
- */
+
 function startNewsAutoRotate() {
     newsInterval = setInterval(() => {
         showNewsSlide(currentNewsIndex + 1);
     }, 8000); // Change news every 8 seconds
 }
 
-/**
- * Initializes the news carousel DOM elements and starts rotation.
- */
+
 function setupNewsCarousel() {
-    // Stop any running interval first
     if (newsInterval) clearInterval(newsInterval);
 
     const container = document.getElementById('news-carousel');
     if (container) {
         newsSlides = Array.from(container.querySelectorAll('.news-slide'));
         
-        // Only start if there's content
         if (newsSlides.length > 0) {
             currentNewsIndex = 0; 
             showNewsSlide(0);
             
-            // Start auto-rotate only if there is more than one slide
             if (newsSlides.length > 1) {
                  startNewsAutoRotate();
             }
@@ -662,10 +725,6 @@ function setupNewsCarousel() {
 
 
 // --- Main Application Logic --- 
-
-/** 
-* Main function to route and render the page content. 
-*/ 
 async function loadContent() { 
     contentArea.style.opacity = '0'; 
     errorMessage.classList.add('hidden'); 
@@ -691,10 +750,10 @@ async function loadContent() { 
                 htmlContent = await renderJoinPage(); 
                 break; 
             case 'contact': 
-                htmlContent = renderContactPage(); 
+                htmlContent = await renderContactPage(); 
                 break; 
             default: 
-                htmlContent = await renderHome(); // Fallback to home 
+                htmlContent = await renderHome(); 
                 break; 
         } 
         contentArea.innerHTML = htmlContent; 
@@ -717,24 +776,17 @@ async function loadContent() { 
             setupNewsCarousel();
         }
 
-        // Scroll to top and make content visible 
         window.scrollTo({ top: 0, behavior: 'smooth' }); 
         contentArea.style.opacity = '1'; 
     } 
 } 
 
-/** 
-* Navigation handler that updates the state and URL hash. 
-*/ 
 function navigate(page) { 
     currentPage = page; 
     window.location.hash = page === 'home' ? '' : page; 
     loadContent(); 
 } 
 
-/** 
-* Initializes the application based on the URL hash. 
-*/ 
 function init() { 
     const hash = window.location.hash.replace('#', ''); 
     if (hash && hash !== 'home' && ['team', 'research', 'publications', 'join', 'contact'].includes(hash)) { 
@@ -745,7 +797,6 @@ function init() { 
     loadContent(); 
 } 
 
-// Listen for hash changes to handle navigation
 window.addEventListener('hashchange', init); 
 
 // Start the application 

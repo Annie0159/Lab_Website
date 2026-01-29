@@ -16,22 +16,40 @@
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                <!-- Logo/Site Title -->
                 <div class="flex-shrink-0">
                     <a href="#" onclick="navigate('home'); return false;" class="text-2xl font-bold text-gray-900 tracking-tight">
                         AICV Lab
                     </a>
                 </div>
-                <!-- Navigation Links -->
-                <nav class="flex space-x-4 sm:space-x-8">
-                    <a href="#" onclick="navigate('home'); return false;" id="nav-home" class="nav-link text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out font-medium">Home</a>
-                    <a href="#" onclick="navigate('team'); return false;" id="nav-team" class="nav-link text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out font-medium">Team</a>
-                    <a href="#" onclick="navigate('research'); return false;" id="nav-research" class="nav-link text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out font-medium">Research</a>
-                    <a href="#" onclick="navigate('publications'); return false;" id="nav-publications" class="nav-link text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out font-medium">Publications</a>
-                    <a href="#" onclick="navigate('join'); return false;" id="nav-join" class="nav-link text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out font-medium">Join Us</a>
-                    <a href="#" onclick="navigate('contact'); return false;" id="nav-contact" class="nav-link text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out font-medium">Contact</a>
+
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" onclick="navigate('home'); return false;" class="nav-link text-gray-600 hover:text-gray-900 font-medium">Home</a>
+                    <a href="#" onclick="navigate('team'); return false;" class="nav-link text-gray-600 hover:text-gray-900 font-medium">Team</a>
+                    <a href="#" onclick="navigate('research'); return false;" class="nav-link text-gray-600 hover:text-gray-900 font-medium">Research</a>
+                    <a href="#" onclick="navigate('publications'); return false;" class="nav-link text-gray-600 hover:text-gray-900 font-medium">Publications</a>
+                    <a href="#" onclick="navigate('join'); return false;" class="nav-link text-gray-600 hover:text-gray-900 font-medium">Join Us</a>
+                    <a href="#" onclick="navigate('contact'); return false;" class="nav-link text-gray-600 hover:text-gray-900 font-medium">Contact</a>
                 </nav>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-gray-900 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
             </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200">
+            <nav class="px-2 pt-2 pb-4 space-y-1">
+                <a href="#" onclick="navigate('home'); closeMobileMenu(); return false;" class="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50">Home</a>
+                <a href="#" onclick="navigate('team'); closeMobileMenu(); return false;" class="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50">Team</a>
+                <a href="#" onclick="navigate('research'); closeMobileMenu(); return false;" class="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50">Research</a>
+                <a href="#" onclick="navigate('publications'); closeMobileMenu(); return false;" class="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50">Publications</a>
+                <a href="#" onclick="navigate('join'); closeMobileMenu(); return false;" class="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50">Join Us</a>
+                <a href="#" onclick="navigate('contact'); closeMobileMenu(); return false;" class="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50">Contact</a>
+            </nav>
         </div>
     </header>
 

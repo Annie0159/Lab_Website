@@ -801,15 +801,18 @@ async function loadContent() { 
         errorMessage.classList.remove('hidden'); 
     } finally { 
         loadingSpinner.classList.add('hidden'); 
-        document.querySelectorAll('.nav-link').forEach(link => { 
-            link.classList.remove('text-gray-900', 'font-bold', 'border-b-2', 'border-gray-900'); 
-            link.classList.add('text-gray-600', 'font-medium'); 
-        }); 
-        const activeLink = document.getElementById(`nav-${currentPage}`); 
-        if (activeLink) { 
-            activeLink.classList.remove('text-gray-600', 'font-medium'); 
-            activeLink.classList.add('text-gray-900', 'font-bold', 'border-b-2', 'border-gray-900'); 
-        } 
+        const allLinks = document.querySelectorAll('.nav-link, #mobile-menu a');
+
+        allLinks.forEach(link => { 
+            link.classList.remove('text-gray-900', 'font-bold', 'border-b-2', 'border-gray-900', 'text-blue-600', 'border-blue-600'); 
+            link.classList.add('text-gray-600', 'font-medium', 'border-transparent'); 
+            
+            const clickAttr = link.getAttribute('onclick') || "";
+            if (clickAttr.includes(`'${currentPage}'`)) { 
+                link.classList.remove('text-gray-600', 'font-medium', 'border-transparent'); 
+                                link.classList.add('text-gray-900', 'font-bold', 'border-b-2', 'border-gray-900'); 
+            } 
+        });
 
         if (currentPage === 'home') {
             setupNewsCarousel();
@@ -825,6 +828,19 @@ function navigate(page) { 
     window.location.hash = page === 'home' ? '' : page; 
     loadContent(); 
 } 
+
+// Toggle Mobile Menu
+const menuBtn = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+
+menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+});
+
+// Helper function to close menu when a link is clicked
+function closeMobileMenu() {
+    mobileMenu.classList.add('hidden');
+}
 
 function init() { 
     const hash = window.location.hash.replace('#', ''); 
